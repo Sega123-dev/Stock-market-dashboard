@@ -1,5 +1,5 @@
 const Card = ({children}) => {
-    return <div className="h-full w-full rounded-md relative p-8 border-2 bg-gray-300">{children}</div>
+    return <div className="h-full w-full rounded-md relative p-8 border-neutral-200 bg-white border-1">{children}</div>
 }
 
 export default Card
