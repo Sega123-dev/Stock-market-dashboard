@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { mockSearchResults } from "../constants/mock"
 import {XIcon,SearchIcon} from "@heroicons/react/solid"
+import SearchResults from "./SearchResults";
 const Search = () => {
     const [input,setInput] = useState("")
     const [bestMatches,setBestMatches] = useState(mockSearchResults.result)
@@ -38,6 +39,9 @@ const Search = () => {
       >
         <SearchIcon className="h-4 w-4 fill-gray-100" />
       </button>
+      {input && bestMatches.length > 0 ? (
+        <SearchResults results={bestMatches} />
+      ) : null}
     </div>
 }
 
