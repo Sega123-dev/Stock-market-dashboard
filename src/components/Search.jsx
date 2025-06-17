@@ -1,23 +1,31 @@
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
 import { useContext, useState } from "react";
-import { mockSearchResults } from "../constants/mock";
 import ThemeContext from "../context/ThemeContext";
 import SearchResults from "./SearchResults";
-
+import { searchSymbols } from "../api/stock.api";
 const Search = () => {
   const { darkMode } = useContext(ThemeContext);
 
   const [input, setInput] = useState("");
 
-  const [bestMatches, setBestMatches] = useState(mockSearchResults.result);
+  const [bestMatches, setBestMatches] = useState([]);
 
   const clear = () => {
     setInput("");
     setBestMatches([]);
   };
 
-  const updateBestMatches = () => {
-    setBestMatches(mockSearchResults.result);
+  const updateBestMatches = async () => {
+    try {
+      if(input) {
+        const searchResults = await searchSymbols(input)
+        const result = searchResults.result;
+        setBestMatches(result)
+      }
+    } catch (error) {
+      setBestMatches([])
+      console.log(error);
+    }
   };
 
   return (
@@ -34,10 +42,8 @@ const Search = () => {
         }`}
         placeholder="Search stock..."
         onChange={(event) => setInput(event.target.value)}
-        onKeyUp={(event) => {
-          if (event.key === "Enter") {
-            updateBestMatches();
-          }
+        onKeyUp={() => {
+          updateBestMatches();
         }}
       />
       {input && (
