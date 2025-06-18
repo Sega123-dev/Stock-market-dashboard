@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { mockHistoricalData } from "../constants/mock";
-import { convertUnixTimestampToDate } from "../helpers/date-helper";
 import {
   Area,
   XAxis,
@@ -13,6 +12,8 @@ import Card from "./Card";
 import { chartConfig } from "../constants/config";
 import ChartFilter from "./ChartFilter";
 import ThemeContext from "../context/ThemeContext";
+import { fetchHistoricalData } from "../api/stock.api";
+import StockContext from "../context/StockContext";
 
 const Chart = () => {
   const [data, setData] = useState(mockHistoricalData);
@@ -20,16 +21,17 @@ const Chart = () => {
   const [filter, setFilter] = useState("1W");
 
   const { darkMode } = useContext(ThemeContext);
+  const { stockSymbol } = useContext(StockContext)
 
-  const formatData = (data) => {
-    return data.c.map((item, index) => {
-      return {
-        value: item.toFixed(2),
-        date: convertUnixTimestampToDate(data.t[index]),
-      };
-    });
-  };
-
+  useEffect(async () => {
+       try {
+         const result = await fetchHistoricalData(stockSymbol,filter);
+         setData(result);
+       } catch (error) {
+          console.log(error);
+          setData([])
+       }
+  },[data,filter])
   return (
     <Card>
       <ul className="flex absolute top-2 right-2 z-40">
@@ -46,7 +48,7 @@ const Chart = () => {
         ))}
       </ul>
       <ResponsiveContainer>
-        <AreaChart data={formatData(data)}>
+        <AreaChart data={data}>
           <defs>
             <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
               <stop
