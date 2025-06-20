@@ -2,7 +2,7 @@ import Card from "./Card";
 const Overview = ({ symbol,price,change,changePercent,currency }) => {
   return (
      <Card>
-        <span className="absolute left-4 top-4 text-neutral-400 text-base"> {symbol}</span>
+        <span className="absolute left-4 top-4 text-neutral-400 xl:text-base text-sm"> {symbol}</span>
         <div className="w-full h-full flex items-center justify-around">
         <span className="text-2xl xl:text-4xl 2xl:text-4xl flex items-center">
           {price}
