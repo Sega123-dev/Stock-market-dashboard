@@ -3,7 +3,7 @@ import ThemeIcon from "./ThemeIcon"
 
 const Header = ({ name }) => {
     return <>
-    <div className="xl:px-32"><h1 className="text-5xl">{name}</h1>
+    <div className="xl:px-32"><h1 className="text-3xl xl:text-5xl">{name}</h1>
      <Search/>
     </div>
      <ThemeIcon/>
