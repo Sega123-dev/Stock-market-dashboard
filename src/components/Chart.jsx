@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import { mockHistoricalData } from "../constants/mock";
+import { useContext, useEffect, useState } from "react";
 import {
   Area,
   XAxis,
@@ -16,22 +15,20 @@ import { fetchHistoricalData } from "../api/stock.api";
 import StockContext from "../context/StockContext";
 
 const Chart = () => {
-  const [data, setData] = useState(mockHistoricalData);
+  const [data, setData] = useState({});
 
   const [filter, setFilter] = useState("1W");
 
   const { darkMode } = useContext(ThemeContext);
   const { stockSymbol } = useContext(StockContext)
 
-  useEffect(async () => {
-       try {
-         const result = await fetchHistoricalData(stockSymbol,filter);
-         setData(result);
-       } catch (error) {
-          console.log(error);
-          setData([])
+  useEffect(() => {
+       const getChartData = async () => {
+          const result = await fetchHistoricalData(stockSymbol,filter)
+          setData(result);
        }
-  },[data,filter])
+       getChartData()
+  },[stockSymbol,filter])
   return (
     <Card>
       <ul className="flex absolute top-2 right-2 z-40">

@@ -49,6 +49,8 @@ export const fetchHistoricalData = async (stockSymbol, period) => {
     case "1M":
       period = "TIME_SERIES_MONTHLY";
       break;
+    default:
+      functionType = "TIME_SERIES_WEEKLY";
   }
 
   const url = `https://www.alphavantage.co/query?function=${period}&symbol=${stockSymbol}&apikey=${keyAlphaVantage}`;
@@ -59,5 +61,30 @@ export const fetchHistoricalData = async (stockSymbol, period) => {
     throw new Error(message);
   }
 
-  return await response.json();
+  const rawData = await response.json();
+
+  let timeSeriesKey;
+  switch (period) {
+    case "TIME_SERIES_DAILY":
+      timeSeriesKey = "Time Series (Daily)";
+      break;
+    case "TIME_SERIES_WEEKLY":
+      timeSeriesKey = "Weekly Time Series";
+      break;
+    case "TIME_SERIES_MONTHLY":
+      timeSeriesKey = "Monthly Time Series";
+      break;
+  }
+
+  const series = rawData[timeSeriesKey];
+  if (!series) return [];
+
+  const formatted = Object.entries(series)
+    .map(([date, data]) => ({
+      date,
+      value: parseFloat(data["4. close"]),
+    }))
+    .reverse();
+
+  return formatted;
 };
