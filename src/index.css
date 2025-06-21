@@ -18,4 +18,8 @@
   .custom-scrollbar-dark::-webkit-scrollbar-thumb {
     background-color: #312e81;
   }
+  .transparent-background {
+       background: rgba(0, 0, 0, 0.6);
+       z-index: 99;
+  }
 }
