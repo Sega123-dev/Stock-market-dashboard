@@ -18,10 +18,4 @@
   .custom-scrollbar-dark::-webkit-scrollbar-thumb {
     background-color: #312e81;
   }
-  .quicksand { 
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
 }
