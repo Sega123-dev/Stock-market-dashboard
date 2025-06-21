@@ -22,4 +22,8 @@
        background: rgba(0, 0, 0, 0.6);
        z-index: 99;
   }
+  .transparent-background-dark {
+     background: rgba(0, 0, 0, 0.2);
+     z-index: 99;
+  }
 }
