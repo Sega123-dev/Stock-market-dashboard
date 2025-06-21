@@ -8,7 +8,7 @@ const CloseIcon = () => {
 
     const toggleModal = () => {
        setIsModalOpened(!isModalOpened)
-    }
+}
 
   return (
     <button className="h-12 w-12 absolute top-10 right-10 cursor-pointer" onClick={toggleModal}><XIcon className="p-2 text-white"/></button>

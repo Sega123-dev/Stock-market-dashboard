@@ -6,17 +6,18 @@ import StockContext from './context/StockContext';
 import ModalWrapper from './components/ModalWrapper';
 import CloseIcon from './components/CloseIcon';
 import ModalContext from './context/ModalContext';
+import ModalOpener from './components/ModalOpener';
 
 function App() {
   const [darkMode,setDarkMode] = useState(false);
   const [stockSymbol,setStockSymbol] = useState("META");
-  const [isModalOpened,setIsModalOpened] = useState(true)
+  const [isModalOpened,setIsModalOpened] = useState(false)
 
   return(
     <ThemeContext.Provider value={{darkMode,setDarkMode}}>
       <StockContext.Provider value={{stockSymbol,setStockSymbol}}>
         <ModalContext.Provider value={{isModalOpened,setIsModalOpened}}>
-          <ModalWrapper><CloseIcon/></ModalWrapper>
+          <ModalOpener/><ModalWrapper><CloseIcon/></ModalWrapper>
         </ModalContext.Provider>
         <Dashboard/>
       </StockContext.Provider>
