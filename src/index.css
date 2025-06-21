@@ -18,6 +18,14 @@
   .custom-scrollbar-dark::-webkit-scrollbar-thumb {
     background-color: #312e81;
   }
+  .transparent-background {
+       background: rgba(0, 0, 0, 0.6);
+       z-index: 99;
+  }
+  .transparent-background-dark {
+     background: rgba(0, 0, 0, 0.2);
+     z-index: 99;
+  }
   .quicksand { 
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
