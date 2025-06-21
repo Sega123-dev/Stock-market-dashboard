@@ -26,4 +26,10 @@
      background: rgba(0, 0, 0, 0.2);
      z-index: 99;
   }
+  .quicksand { 
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
