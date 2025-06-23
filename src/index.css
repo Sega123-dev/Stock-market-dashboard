@@ -32,4 +32,14 @@
     font-weight: 400;
     font-style: normal;
   }
+  .animation {
+       transform: scale(0.7);
+       animation: popUp 0.5s forwards;
+  }
+  @keyframes popUp {
+  to {
+    transform: scale(1);
+  }
+}
+
 }
