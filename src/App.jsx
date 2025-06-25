@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css'
-import Dashboard from './components/dashboard'
+import Dashboard from './components/Dashboard'
 import ThemeContext from './context/ThemeContext';
 import StockContext from './context/StockContext';
 import ModalWrapper from './components/ModalWrapper';
