@@ -88,3 +88,12 @@ export const fetchHistoricalData = async (stockSymbol, period) => {
 
   return formatted;
 };
+
+export const getQuote = async (stockSymbol) => {
+  try {
+    const result = await fetchStockQuote(stockSymbol);
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};

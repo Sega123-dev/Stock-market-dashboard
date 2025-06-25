@@ -33,7 +33,7 @@
     font-style: normal;
   }
   .animation {
-       transform: scale(0.7);
+       transform: scale(0);
        animation: popUp 0.5s forwards;
   }
   @keyframes popUp {
