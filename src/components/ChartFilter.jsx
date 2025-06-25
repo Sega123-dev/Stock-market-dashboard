@@ -1,3 +1,4 @@
+import React from 'react';
 const ChartFilter = ({ text, active, onClick }) => {
   return (
     <button

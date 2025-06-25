@@ -1,3 +1,4 @@
+import React from 'react';
 import emailjs from '@emailjs/browser';
 import { useEffect, useRef, useState } from 'react';
 import { getQuote } from '../api/stock.api';

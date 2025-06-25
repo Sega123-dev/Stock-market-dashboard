@@ -1,3 +1,4 @@
+import React from 'react';
 import { XIcon } from "@heroicons/react/solid"
 import { useContext } from "react"
 import ModalContext from "../context/ModalContext"

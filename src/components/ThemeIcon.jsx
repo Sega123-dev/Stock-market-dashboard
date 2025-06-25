@@ -1,3 +1,4 @@
+import React from 'react';
 import { MoonIcon } from "@heroicons/react/solid"
 import { useContext } from "react"
 import ThemeContext from "../context/ThemeContext"

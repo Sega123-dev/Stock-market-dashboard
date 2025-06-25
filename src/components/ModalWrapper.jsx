@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from "react"
 import ModalContext from "../context/ModalContext"
 import ThemeContext from "../context/ThemeContext"

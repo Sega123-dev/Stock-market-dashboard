@@ -1,3 +1,4 @@
+import React from 'react';
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
 import { useContext, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
