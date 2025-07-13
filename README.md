@@ -15,3 +15,16 @@ This is a web application that shows most important data from a stock.Users can 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+# Demo
+
+There is a demo website with all core functionalities,uploaded via Vercel [here](https://example.com)
+
+### Installing the app locally
+
+Install the following packages and dependencies:
+
+```
+npm install 
+```
+
