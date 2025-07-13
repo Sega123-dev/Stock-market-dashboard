@@ -18,7 +18,7 @@ This is a web application that shows most important data from a stock.Users can 
 
 # Demo
 
-There is a demo website with all core functionalities,uploaded via Vercel [here](https://example.com)
+There is a demo website with all core functionalities,uploaded via Vercel [here]([https://example.com](https://stock-market-dashboard-ewpx-git-main-sega123-devs-projects.vercel.app/))
 
 ### Installing the app locally
 
