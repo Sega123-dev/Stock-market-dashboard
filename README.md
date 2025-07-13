@@ -10,21 +10,21 @@ This is a web application that shows most important data from a stock.Users can 
 - Responsive website
 - Tailwind based design
 
-# Built with:
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
 # Demo
 
 There is a demo website with all core functionalities,uploaded via Vercel [here](https://stock-market-dashboard-ewpx-git-main-sega123-devs-projects.vercel.app/)
 
 ### Installing the app locally
 
-Install the following packages and dependencies:
+Download the Zip file or clone the repository,after that run the following command in the terminal:
 
 ```
-npm install 
+npm run dev
 ```
+
+# Built with:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
