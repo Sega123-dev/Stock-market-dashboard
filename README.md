@@ -19,8 +19,24 @@ There is a demo website with all core functionalities,uploaded via Vercel [here]
 Download the Zip file or clone the repository,after that run the following command in the terminal:
 
 ```
-npm run dev
+npm install heroicons
 ```
+
+I used icons from this library so you have to install them.Heroicons is an icon React library(v1 is used for this project)
+
+```
+npm install recharts
+```
+
+This is a powerful React library for making charts in React.
+
+```
+npm install emailjs
+```
+
+Used for automated emails about the stock data(Supporting only Gmail).
+
+
 
 # Built with:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
