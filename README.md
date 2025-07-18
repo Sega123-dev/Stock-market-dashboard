@@ -36,8 +36,22 @@ npm install emailjs
 
 Used for automated emails about the stock data(Supporting only Gmail).
 
+```
+npm install dotenv
+```
 
+Install the library for environment variables.You have to get your own Finnhub API key and Alpha Vantage key,and put the keys in .env file.(Make sure to load them and import them).
+You can get FinnhubAPI key from this [link](https://finnhub.io/) and Alpha Vantage key for getting stock chart data can be get [here](https://www.alphavantage.co/)
 
+### Installing tailwind for vite
+
+This section will explain how to install tailwindCSS in vite bundler.Add the following command:
+
+```
+npm install tailwindcss @tailwindcss/vite
+```
+
+This will install tailwind on your machine.Other commands are not necessary but if you encounter issues,check the Tailwind's official [guide](https://tailwindcss.com/docs/installation/using-vite) on how to install TailwindCSS on Vite.
 # Built with:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
