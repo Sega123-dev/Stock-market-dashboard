@@ -14,7 +14,7 @@ This is a web application that shows most important data from a stock.Users can 
 
 There is a demo website with all core functionalities,uploaded via Vercel [here](https://stock-market-dashboard-ewpx-git-main-sega123-devs-projects.vercel.app/)
 
-### Installing the app locally
+# Installing the app locally
 
 Download the Zip file or clone the repository,after that run the following command in the terminal:
 
@@ -52,6 +52,15 @@ npm install tailwindcss @tailwindcss/vite
 ```
 
 This will install tailwind on your machine.Other commands are not necessary but if you encounter issues,check the Tailwind's official [guide](https://tailwindcss.com/docs/installation/using-vite) on how to install TailwindCSS on Vite.
+
+### Running the app
+
+To run the whole app locally,type in the terminal the following command:
+
+```
+npm install tailwindcss @tailwindcss/vite
+```
+
 # Built with:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
